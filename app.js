@@ -26,7 +26,7 @@ const InitializeDBAndServer = async ()=>{
     })
 
     app.listen(3001, ()=>{
-        console.log("app started at server 3000")
+        console.log("app started at server 3001")
     })
 }
 InitializeDBAndServer()
@@ -64,20 +64,21 @@ const {name = "vijaykumar", email="vijaydumpeti70@gmail.com", password="#vijay39
 
     if(is_active === 1){
         if(password.length >= 8 && valiEmailFormat(email) && emailPasswordMatch){
-
+            response.status(200)
+            response.send("Login successfull")
         }
     }else{
         response.send('There is issue with logging in please try again with correct credentials')
     }
 
-    const addUserQuery = `
-        INSERT INTO
-        users 
-        (name, email, password)
-        VALUES
-        ('${name}', '${email}', '${password}');`;
-    const lastID = await dataBase.run(addUserQuery)
-    response.send(`${lastID} user added successfully`)
+    // const addUserQuery = `
+    //     INSERT INTO
+    //     users 
+    //     (name, email, password)
+    //     VALUES
+    //     ('${name}', '${email}', '${password}');`;
+    // const lastID = await dataBase.run(addUserQuery)
+    // response.send(`${lastID} user added successfully`)
 });
 
 
