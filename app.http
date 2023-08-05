@@ -1,0 +1,8 @@
+###
+POST http://localhost:3000/api/login
+
+{
+    "name": "vijaykumar",
+    "email": "vijaydumpeti70@gmail.com",
+    "password": "#vijay3953"
+}

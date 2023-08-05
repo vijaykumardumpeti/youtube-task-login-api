@@ -1,0 +1,10 @@
+CREATE TABLE users (user_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL,email TEXT UNIQUE NOT NULL,password TEXT NOT NULL,is_active INTEGER DEFAULT 1,created_on DATETIME DEFAULT CURRENT_TIMESTAMP,is_email_verified INTEGER DEFAULT 0);
+
+
+
+
+INSERT INTO users (user_id,name, email, password,is_active, created_on, is_email_verified);
+
+
+
+INSERT INTO users (name, email, password) VALUES ("sohel", "sohel@gmail.com", "#sohel3953");
