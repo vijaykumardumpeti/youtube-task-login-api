@@ -66,6 +66,8 @@ const {name = "vijaykumar", email="vijaydumpeti70@gmail.com", password="#vijay39
         if(password.length >= 8 && valiEmailFormat(email) && emailPasswordMatch){
             response.status(200)
             response.send("Login successfull")
+              
+            // response.send({jwtToken})
         }
     }else{
         response.send('There is issue with logging in please try again with correct credentials')
